@@ -1,25 +1,41 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
+    <link rel="stylesheet" href="signup.css">
+
 </head>
+
 <body>
-    <h1>Sign up to shop!</h1>
-    <form class="signupForm">
-        <p>Display Name:</p>
-        <input type="text" name="username">
-        <p>Email:</p>
-        <input type="email" name="email">
-        <p>Password:</p>
-        <input type="password" name="password">
-        <p>Confirm Password:</p>
-        <input type="password" name="confirmPass">
-        <br>
-        <button class="signupbtn">Sign up</button>
-    </form>
-    <p>Already have an account?</p>
-    <p><a href="login.html">Log in</a></p>
-    <script type="module" src="../Backend/signup.js"></script>
+    <div class="card">
+        <div class="left">
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="img">
+        </div>
+        <div class="right">
+            <h1>Create your account</h1>
+            <p>Join eco-finds today! Sign up to start buying and selling pre-loved treasures.</p>
+            <div class="signupcard" ></div>
+            <form class="signupForm">
+                <p class="formdetails">username:</p>
+                <input type="text" name="username">
+                <p class="formdetails">Email:</p>
+                <input type="email" name="email">
+                <p class="formdetails">Password:</p>
+                <input type="password" name="password">
+                <p class="formdetails">Confirm Password:</p>
+                <input type="password" name="confirmPass">
+                <br>
+                <button class="signupbtn">Sign up</button>
+            </form>
+        </div>
+            <div class="loginlink">
+                <p></p>Already have an account?</p>
+                <p><a href="login.html">Log in</a></p>
+            </div>
+            <script type="module" src="../Backend/signup.js"></script>
 </body>
+
 </html>
