@@ -30,7 +30,7 @@ onAuthStateChanged(auth, async (user)=>{
             document.querySelector(".profile p").textContent = "Welcome, User!";
             }}
     else{
-        window.location.href = "login.html";
+        // window.location.href = "login.html";
     }
 }
 );
