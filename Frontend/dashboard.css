@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+nav{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    background-color: yellow;
+    align-items: center;
+    position: relative;
+    height: 150px;
+    /* padding: 0 20px; */
+}
+
+.website-logo img{
+    width: 100px;
+    border-radius: 200px;
+    border-style: dashed;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+}
+.hamburger span{
+    font-size:40px;
+    padding: 15px;
+}
+.cartlogo span{
+    font-size: 42px;
+    margin-left: 400px;
+    z-index: 1;
+
+}
+.profile{
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  gap: 10px;
+  padding: 0 20px;
+}
+.hamburger, .cartlogo, .profile {
+  padding: 0 20px;
+  z-index: 1; /* So they stay above the logo if needed */
+}
