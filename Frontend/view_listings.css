@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    display: flex;
+}
+.add{
+    border: 1px solid black;
+    margin: 10px;
+}
