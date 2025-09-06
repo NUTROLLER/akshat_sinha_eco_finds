@@ -29,7 +29,7 @@ async function displayListings() {
     listingElement.innerHTML = `
       <h3>${listing.title}</h3>
       <p>${listing.description}</p>
-      <p>Price: $${listing.price.toFixed(2)}</p>
+      <p>Price: Rs.${listing.price.toFixed(2)}</p>
       <button data-id="${id}" class="add-to-cart-btn">Add to Cart</button>
     `;
 
