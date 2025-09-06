@@ -12,16 +12,26 @@ const firebaseConfig = {
 console.log("JS loaded")
 // Initialize Firebase
 initializeApp(firebaseConfig);
+const db = getFirestore()
 //Initialize authentication
 const auth = getAuth()
-onAuthStateChanged(auth, (user)=>{
+onAuthStateChanged(auth, async (user)=>{
     if (user){
         console.log("User signed in.")
-         const username = user.displayName || "User";
+         const usernamesRef = collection(db, "username"); //
+        const q = query(usernamesRef, where("uid", "==", user.uid));
+        const querySnapshot = await getDocs(q);
+
+        if (!querySnapshot.empty) {
+            const usernameDoc = querySnapshot.docs[0];
+            const username = usernameDoc.id;
         document.querySelector(".profile p").textContent = `Welcome, ${username}!`;
-    }
+    }   else {
+            document.querySelector(".profile p").textContent = "Welcome, User!";
+            }}
     else{
         window.location.href = "login.html";
     }
-});
+}
+);
 
