@@ -82,9 +82,9 @@ await loadPurchaseHistory(user.uid);
     }   else {
             document.querySelector(".profile p").textContent = "Welcome, User!";
             }}
-    // else{
-    //     window.location.href = "login.html";
-    // }
+    else{
+        window.location.href = "login.html";
+    }
 }
 );
 
