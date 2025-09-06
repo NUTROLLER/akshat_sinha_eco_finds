@@ -4,8 +4,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View or Modify Listings</title>
     <link rel="stylesheet" href="view_listings.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="landing_page.css">
+    <!-- For this page, the above two style the navbar -->
+     <!-- Create a file for the CSS of this page as well -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
+     <nav>
+        <div class="hamburger">
+            <!-- Hamburger menu icon here -->
+             <span class="material-symbols-outlined">menu</span>
+        </div>
+        <div class="website-logo">
+            <img src="logo.png" alt="Logo">
+            <!-- insert image here -->
+        </div>
+        <div class="cartlogo">
+            <span class="material-symbols-outlined">shopping_cart</span>
+            <!-- Cart logo here -->
+        </div>
+        <div class="profile">
+            <a href="dashboard.html"><p></p></a>
+            <!-- If possible picture, if not just username is fine -->
+        </div>
+    </nav>
     <h1>Add, View and Modify Listings</h1>
     <main>
     <div class="add">
@@ -26,10 +49,10 @@
             <br>
             <button class="addListingbtn">Add Item</button>
         </form>
-        <div class="read">
-            <h1>View Listings</h1>
-        </div>
     </div>
+    <div class="read">
+            <h1>View, Edit and Modify Listings</h1>
+        </div>
     </main>
     <script src="../Backend/CRUD.js" type="module"></script>
 </body>
