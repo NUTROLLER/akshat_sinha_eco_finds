@@ -71,3 +71,21 @@ nav{
     height: 70vh;
     object-fit: contain;
 }
+.products{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 30px;
+}
+.buttons{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+}
+.buttons button{
+    padding: 20px;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bolder;
+}

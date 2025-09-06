@@ -127,3 +127,19 @@ a:visited{
 h1{
     font-size: 70px;
 }
+input{
+    padding: 5px;
+    margin: 5px;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.previous-listings{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
