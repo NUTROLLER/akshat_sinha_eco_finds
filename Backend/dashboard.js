@@ -142,15 +142,29 @@ async function loadUserProfile() {
 
 
 //Log out
-const logOutBtn = document.querySelector(".logout")
-logOutBtn.addEventListener('click', ()=>{
+document.addEventListener('DOMContentLoaded', () => {
+  const logOutBtn = document.querySelector(".logout");
+  if (!logOutBtn) return; // just in case button doesn't exist
+
+  logOutBtn.addEventListener('click', () => {
     signOut(auth)
-    .then(()=>{
-        alert("User signed out!")
-        window.location.href = "../Frontend/login.html"
-    })
-    .catch((err)=>{
-        alert("Unable to sign out!")
-    })
-})
+      .then(() => {
+        alert("User signed out!");
+
+        // Update DOM after logout
+        const profileP = document.querySelector(".profile p");
+        if (profileP) {
+          profileP.textContent = "You are logged out.";
+        }
+
+        // Redirect after a short delay
+        setTimeout(() => {
+          window.location.href = "../Frontend/login.html";
+        }, 1000);
+      })
+      .catch((err) => {
+        alert("Unable to sign out!");
+      });
+  });
+});
 
