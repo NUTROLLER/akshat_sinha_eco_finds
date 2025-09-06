@@ -23,7 +23,7 @@ loginForm.addEventListener('submit', (e) => {
   .then((cred)=>{
     // console.log("user logged in successfully")
     alert("Logged in successfully!")
-    window.location.href = "index.html"
+    window.location.href = "dashboard.html"
   })
   .catch((err)=>{
     let errMessage = "Unexpected error occurred";

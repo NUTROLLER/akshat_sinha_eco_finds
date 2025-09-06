@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import {getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"
+import {getAuth, createUserWithEmailAndPassword, updateProfile} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"
 import {getFirestore ,doc, setDoc, getDoc} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"
+
 const firebaseConfig = {
   apiKey: "AIzaSyCLkHnlw9-cX6ec-6sEN7akSJe9ysBGoP0",
   authDomain: "first-proj-firebase9.firebaseapp.com",
@@ -55,7 +56,7 @@ signUpForm.addEventListener('submit', async (e) => {
     console.log("Account created successfully!")
     alert("Account created successfully!")
     signUpForm.reset()
-    window.location.href = "index.html"
+    window.location.href = "dashboard.html"
   })
   .catch((err)=>{
     let errMessage = "Unexpected error occurred";

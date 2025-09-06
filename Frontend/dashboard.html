@@ -14,7 +14,7 @@
              <span class="material-symbols-outlined">menu</span>
         </div>
         <div class="website-logo">
-            <img src="logo.png" alt="Logo">
+            <a href="dashboard.html"><img src="logo.png" alt="Logo"></a>
             <!-- insert image here -->
         </div>
         <div class="cartlogo">
@@ -33,6 +33,7 @@
              <img id="profilePicDisplay" src="" alt="Profile Picture" />
              <input type="file" id="profilePicInput" accept="image/*" />
 <button id="uploadBtn">Upload Profile Picture</button>
+ <button class="logout">Log out</button>
 
         </div>
         <h1 class="name"></h1>
@@ -41,8 +42,8 @@
        </div>
        <div class="previous-listings">
         <h2>Navigations</h2>
-        <button>My listings</button>
-        <button>My Purchases</button>
+        <button><a href="view_listings.html">My listings</a></button>
+        <button>My Purchases</button>  
        </div>
     </main>
     <script src="../Backend/dashboard.js" type="module"></script>

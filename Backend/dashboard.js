@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import {getAuth, onAuthStateChanged,createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"
+import {getAuth, onAuthStateChanged,createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js";
 import { getFirestore, collection, query, where, getDocs, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
@@ -92,3 +92,16 @@ async function loadUserProfile() {
     }
   }
 }
+
+//Log out
+const logOutBtn = document.querySelector(".logout")
+logOutBtn.addEventListener('click', ()=>{
+    signOut(auth)
+    .then(()=>{
+        alert("User signed out!")
+        window.location.href = "../Frontend/login.html"
+    })
+    .catch((err)=>{
+        alert("Unable to sign out!")
+    })
+})
