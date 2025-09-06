@@ -4,7 +4,6 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstati
 import { getFirestore, collection, query, where, getDocs, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 
-
 const firebaseConfig = {
     apiKey: "AIzaSyCLkHnlw9-cX6ec-6sEN7akSJe9ysBGoP0",
     authDomain: "first-proj-firebase9.firebaseapp.com",
@@ -93,6 +92,10 @@ async function loadUserProfile() {
   }
 }
 
+//Hamburger
+//Hamburger functionality
+
+
 //Log out
 const logOutBtn = document.querySelector(".logout")
 logOutBtn.addEventListener('click', ()=>{
@@ -105,3 +108,4 @@ logOutBtn.addEventListener('click', ()=>{
         alert("Unable to sign out!")
     })
 })
+

@@ -4,14 +4,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eco Finds</title>
     <link rel="stylesheet" href="landing_page.css">
+    <link rel="stylesheet" href="dashboard.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
 </head>
 <body>
     <nav>
-        <div class="hamburger">
+       <div class="hamburger">
+            <div class="hamburger-content">
+            <div class="bar"><a href="landing_page.html">Home</div></a>
+            <div class="bar"><a href="cart.html">Cart</div></a>
+            <div class="bar"><a href="browse_listings.html">Browse Listings</div></a>
+            <div class="bar"><a href="view_listings.html">View Your listings</div></a>
+            <div class="bar"><a href="dashboard.html">Dashboard</div></a>
             <!-- Hamburger menu icon here -->
-             <span class="material-symbols-outlined">menu</span>
+            </div>
+             <span id="hamburger-icon" class="material-symbols-outlined">menu</span>
+        </div>
         </div>
         <div class="website-logo">
             <a href="dashboard.html"><img src="logo.png" alt="Logo"></a>
@@ -43,5 +52,6 @@
         </div>
     </main>
     <script type="module" src="../Backend/landing_page.js"></script>
+    <script src="../Backend/hamburger.js"></script>
 </body>
 </html>
