@@ -34,6 +34,51 @@ onAuthStateChanged(auth, async (user)=>{
         document.querySelector(".name").textContent = `${username}`;
         document.querySelector(".email").textContent = `${email}`
         await loadUserProfile(user)
+
+        async function loadPurchaseHistory(userId) {
+  const purchasesContainer = document.createElement("div");
+  purchasesContainer.className = "purchase-history";
+
+  const ordersRef = collection(db, "orders");
+  const q = query(ordersRef, where("userId", "==", userId));
+  const querySnapshot = await getDocs(q);
+
+  if (querySnapshot.empty) {
+    purchasesContainer.innerHTML = "<p>No purchases found.</p>";
+  } else {
+    querySnapshot.forEach((doc) => {
+      const order = doc.data();
+      const orderDiv = document.createElement("div");
+      orderDiv.className = "order";
+
+      let itemsHTML = "";
+      order.items.forEach(item => {
+        itemsHTML += `
+          <div class="item">
+            <strong>${item.title}</strong> x${item.quantity} — Rs.${item.price}
+          </div>
+        `;
+      });
+
+      const date = order.createdAt?.toDate?.().toLocaleString() || "Date unknown";
+
+      orderDiv.innerHTML = `
+        <h3>Order ID: ${doc.id}</h3>
+        <p><strong>Date:</strong> ${date}</p>
+        <p><strong>Total:</strong> Rs.${order.total.toFixed(2)}</p>
+        <div class="items">${itemsHTML}</div>
+        <hr>
+      `;
+
+      purchasesContainer.appendChild(orderDiv);
+    });
+  }
+
+  document.querySelector("main").appendChild(purchasesContainer);
+}
+await loadUserProfile(user);
+await loadPurchaseHistory(user.uid);
+
     }   else {
             document.querySelector(".profile p").textContent = "Welcome, User!";
             }}
