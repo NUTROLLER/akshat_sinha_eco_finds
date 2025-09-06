@@ -30,10 +30,14 @@
        <div class="user-card">
         <div class="profile-picture">
             <!-- Insert user pfp -->
-             <img src="" alt="pfp">
+             <img id="profilePicDisplay" src="" alt="Profile Picture" />
+             <input type="file" id="profilePicInput" accept="image/*" />
+<button id="uploadBtn">Upload Profile Picture</button>
+
         </div>
-        <h1>UserName</h1>
+        <h1 class="name"></h1>
         <p>Email:</p>
+        <p class="email"></p>
        </div>
        <div class="previous-listings">
         <h2>Navigations</h2>

@@ -10,6 +10,6 @@ const firebaseConfig = {
 };
 console.log("JS loaded")
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 //Initialize authentication
 const auth = getAuth()
