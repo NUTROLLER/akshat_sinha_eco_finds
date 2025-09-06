@@ -1,0 +1,145 @@
+/* NAvbar -- same as landing page */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+nav{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    background-color: yellow;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    height: 150px;
+    /* padding: 0 20px; */
+    
+}
+
+.website-logo img{
+    width: 100px;
+    border-radius: 200px;
+    border-style: dashed;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+}
+.hamburger {
+    margin: 0;
+    padding: 0;
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: yellow;
+}
+#hamburger-icon{
+    position: absolute;
+    top: 10px;
+}
+.hamburger-content{
+    width: 20vw;
+    height: 100vh;
+    line-height: 60px;
+    background-color: yellow;
+    padding: 20px;
+    font-size: 40px;
+    position: absolute;
+    left: -500px;
+    transition: left 0.2s linear;
+}
+.hamburger-content.open{
+    /* display: block; */
+    left: -10px;
+}
+.hamburger span{
+    font-size:40px;
+    padding: 15px;
+}
+.cartlogo span{
+    font-size: 42px;
+    margin-left: 400px;
+    z-index: 1;
+
+}
+.profile{
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  gap: 10px;
+  padding: 0 20px;
+}
+.hamburger, .cartlogo, .profile {
+  padding: 0 20px;
+  z-index: 1; /* So they stay above the logo if needed */
+}
+.search-bar{
+    border: 1px solid black;
+    display: flex;
+    width: 100vw;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.filter{
+    width: 100vw;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
+}
+.filter button{
+    padding: 10px;
+    margin: 0px 10px;
+}
+.banner-image img{
+    width: 90vw;
+    height: 70vh;
+    object-fit: contain;
+}
+button{
+    border: none;
+    padding: 15px;
+    margin: 5px;
+    color: black;
+    background-color: rgb(255, 255, 0);
+    transition: background-color 0.1s linear;
+}
+button:hover{
+    background-color: rgb(239, 239, 1);
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    
+}
+a:visited{
+    color:black;
+}
+h1{
+    font-size: 70px;
+}
+input{
+    padding: 5px;
+    margin: 5px;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.previous-listings{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

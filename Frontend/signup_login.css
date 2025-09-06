@@ -1,0 +1,108 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  height: 100vh;
+  background-color: #fff; /* white background */
+  color: #000; /* black text */
+  font-family: 'Seoge UI',Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #000;
+}
+
+form.login {
+  background-color: #ffeb3b; /* yellow */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+form.login p {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+form.login input {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+form.login button.loginBtn {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+form.login button.loginBtn:hover {
+  background-color: #333;
+}
+
+p {
+  margin-top: 10px;
+}
+
+a {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Reuse styles for signup form */
+form.signupForm {
+  background-color: #ffeb3b; /* yellow */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-top: 0; /* to keep it consistent */
+}
+
+form.signupForm p {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+form.signupForm input {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+button.signupbtn {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button.signupbtn:hover {
+  background-color: #333;
+}

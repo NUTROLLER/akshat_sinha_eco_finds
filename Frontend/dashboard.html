@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="landing_page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <div class="hamburger">
+            <div class="hamburger-content">
+            <div class="bar"><a href="landing_page.html">Home</div></a>
+            <div class="bar"><a href="cart.html">Cart</div></a>
+            <div class="bar"><a href="browse_listings.html">Browse Listings</div></a>
+            <div class="bar"><a href="view_listings.html">View Your listings</div></a>
+            <div class="bar"><a href="dashboard.html">Dashboard</div></a>
+            <!-- Hamburger menu icon here -->
+            </div>
+             <span id="hamburger-icon" class="material-symbols-outlined">menu</span>
+        </div>
+        <div class="website-logo">
+            <a href="dashboard.html"><img src="logo.png" alt="Logo"></a>
+            <!-- insert image here -->
+        </div>
+        <div class="cartlogo">
+            <a href="cart.html"><span class="material-symbols-outlined">shopping_cart</span></a>
+            <!-- Cart logo here -->
+        </div>
+        <div class="profile">
+            <a href="landing_page.css"><p></p></a>
+            <!-- If possible picture, if not just username is fine -->
+        </div>
+    </nav>
+    <main>
+       <div class="user-card">
+        <div style="text-align: center;" class="profile-picture">
+           <!-- Insert user pfp 
+             <img id="profilePicDisplay" src="" alt="Profile Picture" />
+             <input type="file" id="profilePicInput" accept="image/*" />
+<button id="uploadBtn">Upload Profile Picture</button> -->
+ <button class="logout">Log out</button> 
+
+        </div>
+        <h1 class="name"></h1>
+        <p style="text-align: center;">Email:</p>
+        <p style="text-align: center;" class="email"></p>
+       </div>
+       <div class="previous-listings">
+        <h2>Navigations</h2>
+        <button><a href="view_listings.html">My listings</a></button>
+        <h2 style="border-bottom: 1px solid black">My Purchases </h2>
+       </div>
+    </main>
+    <script src="../Backend/dashboard.js" type="module"></script>
+    <script src="../Backend/hamburger.js"></script>
+</body>
+</html>
