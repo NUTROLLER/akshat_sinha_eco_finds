@@ -9,6 +9,29 @@
     <!-- Your css here -->
 </head>
 <body>
-    
+     <nav>
+        <div class="hamburger">
+            <!-- Hamburger menu icon here -->
+             <span class="material-symbols-outlined">menu</span>
+        </div>
+        <div class="website-logo">
+            <a href="dashboard.html"><img src="logo.png" alt="Logo"></a>
+            <!-- insert image here -->
+        </div>
+        <div class="cartlogo">
+            <span class="material-symbols-outlined">shopping_cart</span>
+            <!-- Cart logo here -->
+        </div>
+        <div class="profile">
+            <a href="dashboard.html"><p></p></a>
+            <!-- If possible picture, if not just username is fine -->
+        </div>
+    </nav>
+    <h1>Your Cart</h1>
+  <div class="cart-items"></div>
+  <h2 id="total">Total: Rs.0</h2>
+  <button id="purchaseBtn">Purchase</button>
+
+  <script type="module" src="../Backend/cart.js"></script>
 </body>
 </html>
